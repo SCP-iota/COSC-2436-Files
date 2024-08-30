@@ -1,2 +1,7 @@
-# COSC-2436-Files
-My files for the COSC-2436 course at Collin College
+# My COSC-2436 Files for Collin College
+
+These are just my projects and other miscillaneous stuff from my COSC-2436 class at Collin College with Professor Rupesh Bhochhibhoya.
+
+## Directory
+
+* [Projects](projects)
