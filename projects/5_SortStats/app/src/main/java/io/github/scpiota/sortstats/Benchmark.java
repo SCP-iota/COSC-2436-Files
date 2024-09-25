@@ -23,7 +23,7 @@ public class Benchmark {
         this.maxTime = maxTime;
     }
 
-    public Benchmark(Algorithm algo) {
+    public Benchmark(SortAlgorithm algo) {
         long minTime = Integer.MAX_VALUE;
         long maxTime = 0;
         long totalTime = 0;
