@@ -5,3 +5,4 @@
 * [COMS2](3_COMS2)
 * [COMS3](4_COMS3)
 * [SortStats](5_SortStats)
+* [COMS4](6_COMS4)
