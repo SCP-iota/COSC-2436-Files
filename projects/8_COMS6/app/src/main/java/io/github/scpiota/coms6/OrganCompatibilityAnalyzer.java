@@ -2,6 +2,8 @@ package io.github.scpiota.coms6;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class OrganCompatibilityAnalyzer {
     private List<CyberneticOrgan> organs;
@@ -134,5 +136,18 @@ public class OrganCompatibilityAnalyzer {
         return organs.stream()
             .filter(organ -> isCompatible(organ, patient))
             .toList();
+    }
+
+    public double calculateCompatibilityScore(CyberneticOrgan organ, Patient patient) {
+        return 0.4 * ((int)calculateBloodTypeCompatibility(organ.getBloodType(), patient.getBloodType())) +
+               0.3 * ((int)calculateWeightCompatibility(organ.getWeight(), patient.getWeight())) +
+               0.3 * ((int)calculateHlaCompatibility(organ.getHla(), patient.getHla()));
+    }
+
+    Map<Patient, List<Double>> calculateCompatibilityScores() {
+        return patients.stream()
+            .collect(Collectors.toMap(patient -> patient, patient -> organs.stream()
+                .map(organ -> calculateCompatibilityScore(organ, patient))
+                .toList()));
     }
 }

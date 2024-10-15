@@ -28,5 +28,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "io.github.scpiota.Main"
+    mainClass = "io.github.scpiota.coms6.Main"
 }

@@ -6,6 +6,10 @@ import java.util.Collections;
 public class OrganInventory {
     private ArrayList<CyberneticOrgan> inventory = new ArrayList<>();
 
+    public ArrayList<CyberneticOrgan> getOrgans() {
+        return inventory;
+    }
+
     public void addOrgan(CyberneticOrgan organ) {
         inventory.add(organ);
     }
